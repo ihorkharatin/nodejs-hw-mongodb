@@ -13,24 +13,24 @@ contactsRouter.get('/', ctrlWrapper(contactControllers.getContactsController));
 contactsRouter.get(
   '/:id',
   isValidId,
-  ctrlWrapper(contactControllers.getContactByIdController)
+  ctrlWrapper(contactControllers.getContactByIdController),
 );
 
 contactsRouter.post('/', ctrlWrapper(contactControllers.addContactController));
 
 contactsRouter.put(
   '/:id',
-  ctrlWrapper(contactControllers.upsertContactController)
+  ctrlWrapper(contactControllers.upsertContactController),
 );
 
 contactsRouter.patch(
   '/:id',
-  ctrlWrapper(contactControllers.patchContactController)
+  ctrlWrapper(contactControllers.patchContactController),
 );
-
+//contacts
 contactsRouter.delete(
   '/:id',
-  ctrlWrapper(contactControllers.deleteContactController)
+  ctrlWrapper(contactControllers.deleteContactController),
 );
 
 export default contactsRouter;
