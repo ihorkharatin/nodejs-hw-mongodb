@@ -30,7 +30,7 @@ const contactSchema = new Schema(
     versionKey: false,
   },
 );
-
+//contacts
 const ContactCollection = model('contact', contactSchema);
 
 export default ContactCollection;
