@@ -29,23 +29,9 @@ const contactSchema = new Schema(
   {
     timestamps: true,
     versionKey: false,
-  }
+  },
 );
-
-export const sortByListContact = [
-  'name',
-  'phoneNumber',
-  'email',
-  'isFavourite',
-  'contactType',
-];
-
-contactSchema.post('save', handleSaveError);
-
-contactSchema.pre('findOneAndUpdate', setUpdateSettings);
-
-contactSchema.post('findOneAndUpdate', handleSaveError);
-
+//contacts update
 const ContactCollection = model('contact', contactSchema);
 
 export default ContactCollection;

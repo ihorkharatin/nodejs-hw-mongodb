@@ -18,7 +18,7 @@ export const getContactsController = async (req, res) => {
     data,
   });
 };
-
+//contacts update
 export const getContactByIdController = async (req, res) => {
   const { id } = req.params;
   const data = await contactServices.getContactById(id);
@@ -51,7 +51,7 @@ export const upsertContactController = async (req, res) => {
     req.body,
     {
       upsert: true,
-    }
+    },
   );
 
   const status = isNew ? 201 : 200;
