@@ -18,40 +18,36 @@ contactsRouter.get(
   '/',
   parsePaginationParams,
   parseSortParamsDecorator(sortByListContact),
-  ctrlWrapper(contactControllers.getContactsController)
+  ctrlWrapper(contactControllers.getContactsController),
 );
 
 contactsRouter.get(
   '/:id',
   isValidId,
-  ctrlWrapper(contactControllers.getContactByIdController)
+  ctrlWrapper(contactControllers.getContactByIdController),
 );
 
 contactsRouter.post(
   '/',
   validateBody(contactAddSchema),
-  ctrlWrapper(contactControllers.addContactController)
+  ctrlWrapper(contactControllers.addContactController),
 );
 
 contactsRouter.put(
   '/:id',
   validateBody(contactAddSchema),
-  ctrlWrapper(contactControllers.upsertContactController)
+  ctrlWrapper(contactControllers.upsertContactController),
 );
 
 contactsRouter.patch(
   '/:id',
   validateBody(contactUpdateSchema),
-  ctrlWrapper(contactControllers.patchContactController)
+  ctrlWrapper(contactControllers.patchContactController),
 );
-<<<<<<< HEAD
 //contacts update
-=======
-
->>>>>>> main
 contactsRouter.delete(
   '/:id',
-  ctrlWrapper(contactControllers.deleteContactController)
+  ctrlWrapper(contactControllers.deleteContactController),
 );
 
 export default contactsRouter;
