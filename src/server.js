@@ -14,6 +14,7 @@ export const setupServer = () => {
 
   app.use(cors());
   // app.use(logger);
+  //server
   app.use(express.json());
 
   app.use('/contacts', contactsRouter);
