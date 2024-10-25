@@ -11,7 +11,7 @@ export const getContactsController = async (req, res) => {
     data,
   });
 };
-//contacts
+//contacts update
 export const getContactByIdController = async (req, res) => {
   const { id } = req.params;
   const data = await contactServices.getContactById(id);
